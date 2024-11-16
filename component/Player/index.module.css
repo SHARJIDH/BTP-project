@@ -1,5 +1,10 @@
 .playerContainer {
-  @apply relative overflow-hidden mb-5 h-full;
+  @apply relative rounded-lg overflow-hidden mb-5 h-full;
+  video {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+  }
 }
 
 .active {

@@ -21,13 +21,19 @@ export default function Home() {
   }
   return (
     <div className={styles.homeContainer}>
-        <h1>Video calling </h1>
+      <div className={styles.card}>
+        <h1>Video calling</h1>
         <div className={styles.enterRoom}>
-          <input placeholder='Enter Room ID' value={roomId} onChange={(e) => setRoomId(e?.target?.value)}/>
+          <input 
+            placeholder='Enter Room ID' 
+            value={roomId} 
+            onChange={(e) => setRoomId(e?.target?.value)}
+          />
           <button onClick={joinRoom}>Join Room</button>
         </div>
-        <span  className={styles.separatorText} >--------------- OR ---------------</span>
+        <div className={styles.separatorText}>--------------- OR ---------------</div>
         <button onClick={createAndJoin}>Create a new room</button>
+      </div>
     </div>
   )
 }
